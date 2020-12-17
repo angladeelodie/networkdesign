@@ -1,8 +1,8 @@
 let cv, c;
 
 let GRID = {
-  gap: 30,
-  margin: 10,
+  gap: 70,
+  margin: 50,
   pointRadius: 2,
 };
 
@@ -90,15 +90,16 @@ function onValueChanged(snapshot) {
 function drawSeparationLine() {
   let { x, y } = snapToGrid(MOUSE.x, MOUSE.y);
   let { col } = posToGrid(MOUSE.x, MOUSE.y);
+  let separationColumn = 17;
   c.save();
-
+  c.strokeStyle ="black";
   c.beginPath();
-  c.moveTo(x, 0);
-  c.lineTo(x, cv.height);
-
+  // c.moveTo(x, 0);
+   // c.moveTo(x, cv.height);
+  c.moveTo(GRID.gap * separationColumn, -100);
+  c.lineTo(GRID.gap * separationColumn, cv.height);
   LVL.separationCol = col;
   c.stroke();
-
   c.restore();
 }
 
