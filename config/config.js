@@ -50,7 +50,7 @@ firebase
 
 DATABASE = firebase.database();
 
-function SEND_MESSAGE(_type, _data = "yes") {
+function SEND_MESSAGE(_type, _data) {
   // _data = {'data': _data, 't_created': Date.now()};
   DATABASE.ref(_type).set(_data);
 }
