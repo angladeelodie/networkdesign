@@ -11,12 +11,11 @@ class Target {
       strokeColor: "rgba(170, 209, 197,0.5)",
       mustBeIn: false,
       active: false,
-      
+
       // need to be in opts
       c: null,
       grid: {},
       angle: 0,
-      
     };
 
     Object.assign(this, def, opts);
@@ -52,7 +51,7 @@ class Target {
     c.closePath();
 
     if (this.active == true) {
-       //ajouter contour pour target active
+      //ajouter contour pour target active
       c.stroke();
     }
 
